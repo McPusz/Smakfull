@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class RecipeCell: UITableViewCell {
 
@@ -17,14 +18,9 @@ class RecipeCell: UITableViewCell {
     @IBOutlet weak var recipeImageView: UIImageView!
     @IBOutlet weak var recipeName: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-    
     func configure(dataSource: RecipeModel) {
         self.recipeName.text = dataSource.title
-        
+        self.recipeImageView.kf.setImage(with: dataSource.imageURL)
     }
 
 }

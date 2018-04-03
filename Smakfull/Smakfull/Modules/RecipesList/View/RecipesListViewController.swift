@@ -8,6 +8,7 @@
 
 import UIKit
 import RxSwift
+import RxCocoa
 
 class RecipesListViewController: UIViewController {
     
@@ -16,23 +17,38 @@ class RecipesListViewController: UIViewController {
     
     private let viewModel = RecipesListViewModel()
     private let disposeBag = DisposeBag()
+    private let searchDebounce: RxTimeInterval = 0.3
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.shouldReloadTableView()
-        self.dummyRequest()
+        self.setupSearchBar()
+        self.hideKeyboardWhenTappedAround()
     }
-
-    private func shouldReloadTableView() {
-        self.viewModel.reloadAction.subscribe(onNext: { [weak self] in
-            self?.tableView.reloadData()
+    
+    private func setupSearchBar() {
+        
+        let searchResultsObservable = self.searchBar
+            .rx
+            .text
+            .orEmpty
+            .debounce(self.searchDebounce, scheduler: MainScheduler.instance)
+            .distinctUntilChanged()
+        
+        
+        searchResultsObservable.subscribe(onNext: { [weak self] (query) in
+            if !query.isEmpty {
+                self?.viewModel.searchRequest(for: query)
+            }
         }).disposed(by: self.disposeBag)
     }
     
-    private func dummyRequest() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { [weak self] in
-            self?.viewModel.searchRequest(for: "appelsin")
-        }
+    private func shouldReloadTableView() {
+        self.viewModel
+            .reloadAction
+            .subscribe(onNext: { [weak self] in
+                self?.tableView.reloadData()
+            }).disposed(by: self.disposeBag)
     }
 }
 

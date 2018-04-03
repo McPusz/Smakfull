@@ -20,7 +20,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vPm-Oz-Wtv">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="66" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vPm-Oz-Wtv">
                                 <rect key="frame" x="0.0" y="144" width="375" height="634"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -31,13 +31,13 @@
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="65.666666666666671"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4fI-Cx-pgy">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="4fI-Cx-pgy">
                                                     <rect key="frame" x="0.0" y="0.0" width="65.666666666666671" height="65.666666666666671"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="4fI-Cx-pgy" secondAttribute="height" multiplier="1:1" id="p7w-pc-eTE"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" text="Svinekjøtt med perler diqweiqeqeqewq" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AcN-Sl-tDS">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Svinekjøtt med perler diqweiqeqeqewq" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AcN-Sl-tDS">
                                                     <rect key="frame" x="75.666666666666671" y="15.999999999999996" width="253.33333333333331" height="33.666666666666657"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -48,8 +48,8 @@
                                                 <constraint firstAttribute="bottom" secondItem="4fI-Cx-pgy" secondAttribute="bottom" id="ECm-ho-GBq"/>
                                                 <constraint firstItem="4fI-Cx-pgy" firstAttribute="top" secondItem="fy5-EN-QVz" secondAttribute="top" id="GM4-eQ-Mi0"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="AcN-Sl-tDS" secondAttribute="trailing" constant="5" id="Lhh-Q0-LPT"/>
-                                                <constraint firstItem="AcN-Sl-tDS" firstAttribute="centerY" secondItem="4fI-Cx-pgy" secondAttribute="centerY" id="Wvx-Pl-Vy4"/>
                                                 <constraint firstItem="AcN-Sl-tDS" firstAttribute="top" secondItem="fy5-EN-QVz" secondAttribute="topMargin" constant="5" id="ZEJ-0P-xa7"/>
+                                                <constraint firstItem="4fI-Cx-pgy" firstAttribute="height" secondItem="fy5-EN-QVz" secondAttribute="height" id="iJE-s6-Gyy"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="AcN-Sl-tDS" secondAttribute="bottom" constant="5" id="mHx-M5-ctT"/>
                                                 <constraint firstItem="4fI-Cx-pgy" firstAttribute="leading" secondItem="fy5-EN-QVz" secondAttribute="leading" id="p0h-BQ-t0E"/>
                                                 <constraint firstItem="AcN-Sl-tDS" firstAttribute="leading" secondItem="4fI-Cx-pgy" secondAttribute="trailing" constant="10" id="tjk-8s-OlY"/>
@@ -66,7 +66,7 @@
                                     <outlet property="delegate" destination="tOr-AC-wgK" id="Egs-Dk-LMC"/>
                                 </connections>
                             </tableView>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="XQW-P9-IE9">
+                            <searchBar contentMode="redraw" placeholder="Søk mat (f.ek. kjøtt)" translatesAutoresizingMaskIntoConstraints="NO" id="XQW-P9-IE9">
                                 <rect key="frame" x="0.0" y="88" width="375" height="56"/>
                                 <color key="barTintColor" red="1" green="0.58039215690000001" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <textInputTraits key="textInputTraits"/>

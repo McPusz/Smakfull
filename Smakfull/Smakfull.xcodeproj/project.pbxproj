@@ -21,6 +21,7 @@
 		B6FFDABF2073F96900D869A3 /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FFDABE2073F96900D869A3 /* RecipeModel.swift */; };
 		B6FFDAC120740B6800D869A3 /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FFDAC020740B6800D869A3 /* RecipeCell.swift */; };
 		B6FFDAC320740F9100D869A3 /* RecipesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FFDAC220740F9100D869A3 /* RecipesListViewModel.swift */; };
+		B6FFDAC620741D1000D869A3 /* UIViewController+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FFDAC520741D1000D869A3 /* UIViewController+Keyboard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		B6FFDABE2073F96900D869A3 /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
 		B6FFDAC020740B6800D869A3 /* RecipeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
 		B6FFDAC220740F9100D869A3 /* RecipesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesListViewModel.swift; sourceTree = "<group>"; };
+		B6FFDAC520741D1000D869A3 /* UIViewController+Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Keyboard.swift"; sourceTree = "<group>"; };
 		CB88086A517F0F1C68C80813 /* Pods-Smakfull.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smakfull.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Smakfull/Pods-Smakfull.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,8 +98,9 @@
 			children = (
 				B695EC442073DA23006FFF69 /* AppSettings */,
 				B695EC462073DA4B006FFF69 /* SupportingFiles */,
-				B695EC482073DA89006FFF69 /* Networking */,
 				B695EC472073DA79006FFF69 /* Modules */,
+				B695EC482073DA89006FFF69 /* Networking */,
+				B6FFDAC420741CFC00D869A3 /* Extensions */,
 			);
 			path = Smakfull;
 			sourceTree = "<group>";
@@ -209,6 +212,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		B6FFDAC420741CFC00D869A3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B6FFDAC520741D1000D869A3 /* UIViewController+Keyboard.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -303,6 +314,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Smakfull/Pods-Smakfull-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Reachability/Reachability.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
@@ -312,6 +324,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
@@ -353,6 +366,7 @@
 				B6FFDAB92073F44B00D869A3 /* NetworkService.swift in Sources */,
 				B6FFDAC120740B6800D869A3 /* RecipeCell.swift in Sources */,
 				B695EC332073D85E006FFF69 /* AppDelegate.swift in Sources */,
+				B6FFDAC620741D1000D869A3 /* UIViewController+Keyboard.swift in Sources */,
 				B6FFDAC320740F9100D869A3 /* RecipesListViewModel.swift in Sources */,
 				B6FFDAAC2073DB4100D869A3 /* InitialViewController.swift in Sources */,
 				B6FFDAB52073E86C00D869A3 /* RecipesListViewController.swift in Sources */,

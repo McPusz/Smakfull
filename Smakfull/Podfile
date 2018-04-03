@@ -5,4 +5,5 @@ pod 'Moya/RxSwift'
 pod 'RxCocoa'
 pod 'Reachability'
 pod 'SwiftLint'
+pod 'Kingfisher'
 end
