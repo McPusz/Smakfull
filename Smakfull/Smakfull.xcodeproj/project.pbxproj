@@ -20,6 +20,7 @@
 		B6FFDABB2073F68900D869A3 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FFDABA2073F68900D869A3 /* NetworkManager.swift */; };
 		B6FFDABF2073F96900D869A3 /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FFDABE2073F96900D869A3 /* RecipeModel.swift */; };
 		B6FFDAC120740B6800D869A3 /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FFDAC020740B6800D869A3 /* RecipeCell.swift */; };
+		B6FFDAC320740F9100D869A3 /* RecipesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FFDAC220740F9100D869A3 /* RecipesListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		B6FFDABA2073F68900D869A3 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		B6FFDABE2073F96900D869A3 /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
 		B6FFDAC020740B6800D869A3 /* RecipeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
+		B6FFDAC220740F9100D869A3 /* RecipesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesListViewModel.swift; sourceTree = "<group>"; };
 		CB88086A517F0F1C68C80813 /* Pods-Smakfull.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smakfull.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Smakfull/Pods-Smakfull.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -194,6 +196,7 @@
 		B6FFDABC2073F93E00D869A3 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				B6FFDAC220740F9100D869A3 /* RecipesListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -350,6 +353,7 @@
 				B6FFDAB92073F44B00D869A3 /* NetworkService.swift in Sources */,
 				B6FFDAC120740B6800D869A3 /* RecipeCell.swift in Sources */,
 				B695EC332073D85E006FFF69 /* AppDelegate.swift in Sources */,
+				B6FFDAC320740F9100D869A3 /* RecipesListViewModel.swift in Sources */,
 				B6FFDAAC2073DB4100D869A3 /* InitialViewController.swift in Sources */,
 				B6FFDAB52073E86C00D869A3 /* RecipesListViewController.swift in Sources */,
 				B6FFDAB72073F09600D869A3 /* NetworkSettings.swift in Sources */,

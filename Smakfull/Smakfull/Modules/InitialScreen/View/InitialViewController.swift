@@ -7,34 +7,31 @@
 //
 
 import UIKit
-import RxSwift
 
+//This is a dummy VC because of initial assignment misunderstanding
 class InitialViewController: UIViewController {
 
     @IBOutlet weak var loaderImageView: UIImageView!
     @IBOutlet weak var loaderErrorLabel: UILabel!
     @IBOutlet weak var retryButton: UIButton!
-     private let disposeBag = DisposeBag()
-    
+    //This retry button was meant to retry request after network errors while geting recipes list, but the actual assignment's task is about live-requesting and searching by queryString in request than filtering results as I thought first (what I personally think is not such optimal...)
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupView()
         
-        let recipes = RecipesManager.shared.getRecipes(for: "appelsin")
-        recipes.subscribe(onNext: { [weak self] (recipes) in
-            print(recipes)
-            self?.goToRecipesList(recipes: recipes)
-        }).disposed(by: (self.disposeBag))
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) { [weak self] in
+            self?.goToRecipesList()
+        }
     }
     
     private func setupView() {
         self.retryButton.isHidden = true
     }
 
-    private func goToRecipesList(recipes: [RecipeModel]) {
+    private func goToRecipesList() {
         let recipesSB = UIStoryboard(name: "RecipesList", bundle: nil)
-        let recipesVC = recipesSB.instantiateViewController(withIdentifier: "RecipesListViewController") as? RecipesListViewController
-        recipesVC?.recipes = recipes
-        self.present(recipesVC!, animated: true, completion: nil)
+        let recipesVC = recipesSB.instantiateViewController(withIdentifier: "RecipesListViewController")
+        self.present(recipesVC, animated: true, completion: nil)
     }
 }

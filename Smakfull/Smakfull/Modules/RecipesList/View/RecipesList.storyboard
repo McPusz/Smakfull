@@ -37,7 +37,7 @@
                                                         <constraint firstAttribute="width" secondItem="4fI-Cx-pgy" secondAttribute="height" multiplier="1:1" id="p7w-pc-eTE"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Svinekjøtt med perler" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AcN-Sl-tDS">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" text="Svinekjøtt med perler diqweiqeqeqewq" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AcN-Sl-tDS">
                                                     <rect key="frame" x="75.666666666666671" y="15.999999999999996" width="253.33333333333331" height="33.666666666666657"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
