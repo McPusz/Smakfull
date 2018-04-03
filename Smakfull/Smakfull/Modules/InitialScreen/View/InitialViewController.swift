@@ -10,6 +10,9 @@ import UIKit
 
 class InitialViewController: UIViewController {
 
+    @IBOutlet weak var loaderImageView: UIImageView!
+    @IBOutlet weak var loaderErrorLabel: UILabel!
+    @IBOutlet weak var retryButton: UIButton!
     
     
     override func viewDidLoad() {
@@ -18,7 +21,7 @@ class InitialViewController: UIViewController {
     }
     
     private func setupView() {
-        
+        self.retryButton.isHidden = true
     }
 
 }

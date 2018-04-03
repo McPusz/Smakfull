@@ -12,22 +12,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Initial View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Smakfull" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="InitialViewController" customModule="Smakfull" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aEK-Lk-m3O">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loader_icon" translatesAutoresizingMaskIntoConstraints="NO" id="aEK-Lk-m3O">
                                 <rect key="frame" x="146.66666666666666" y="445.33333333333331" width="81.666666666666657" height="81.333333333333314"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="aEK-Lk-m3O" secondAttribute="height" multiplier="1:1" id="11F-kr-eEB"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zEA-ep-96V">
-                                <rect key="frame" x="20" y="536.66666666666663" width="335" height="25.333333333333371"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="loading" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zEA-ep-96V">
+                                <rect key="frame" x="20" y="541.66666666666663" width="335" height="25.333333333333371"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="21"/>
                                 <color key="textColor" red="0.99215686270000003" green="1" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -49,7 +49,7 @@
                         <color key="backgroundColor" red="1" green="0.58039215686274515" blue="0.10196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="x5Y-Er-dED" secondAttribute="trailing" constant="20" id="8Gb-u5-1sW"/>
-                            <constraint firstItem="zEA-ep-96V" firstAttribute="top" secondItem="aEK-Lk-m3O" secondAttribute="bottom" constant="10" id="A3s-NP-Fvc"/>
+                            <constraint firstItem="zEA-ep-96V" firstAttribute="top" secondItem="aEK-Lk-m3O" secondAttribute="bottom" constant="15" id="A3s-NP-Fvc"/>
                             <constraint firstItem="8rn-rs-aoO" firstAttribute="top" relation="greaterThanOrEqual" secondItem="zEA-ep-96V" secondAttribute="bottom" constant="20" id="Azw-D3-oPr"/>
                             <constraint firstItem="aEK-Lk-m3O" firstAttribute="top" secondItem="x5Y-Er-dED" secondAttribute="bottom" constant="20" id="B5x-mQ-oXm"/>
                             <constraint firstItem="8rn-rs-aoO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="C9N-Zt-Sa7"/>
@@ -66,9 +66,17 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="loaderErrorLabel" destination="zEA-ep-96V" id="16B-4w-qOi"/>
+                        <outlet property="loaderImageView" destination="aEK-Lk-m3O" id="FGU-tp-wma"/>
+                        <outlet property="retryButton" destination="8rn-rs-aoO" id="5oE-N5-Fkc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="loader_icon" width="65" height="65"/>
+    </resources>
 </document>

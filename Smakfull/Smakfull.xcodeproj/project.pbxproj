@@ -10,9 +10,9 @@
 		AC3D79CF9AA96CB41A98C86B /* Pods_Smakfull.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F860C0FBD64BAA61E51CF4E /* Pods_Smakfull.framework */; };
 		B695EC332073D85E006FFF69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B695EC322073D85E006FFF69 /* AppDelegate.swift */; };
 		B695EC382073D85E006FFF69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B695EC362073D85E006FFF69 /* Main.storyboard */; };
-		B695EC3A2073D863006FFF69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B695EC392073D863006FFF69 /* Assets.xcassets */; };
 		B695EC3D2073D863006FFF69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B695EC3B2073D863006FFF69 /* LaunchScreen.storyboard */; };
 		B6FFDAAC2073DB4100D869A3 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FFDAAB2073DB4100D869A3 /* InitialViewController.swift */; };
+		B6FFDAAE2073E19D00D869A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6FFDAAD2073E19D00D869A3 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,10 +21,10 @@
 		B695EC2F2073D85E006FFF69 /* Smakfull.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smakfull.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B695EC322073D85E006FFF69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B695EC372073D85E006FFF69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B695EC392073D863006FFF69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B695EC3C2073D863006FFF69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B695EC3E2073D863006FFF69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B6FFDAAB2073DB4100D869A3 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
+		B6FFDAAD2073E19D00D869A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB88086A517F0F1C68C80813 /* Pods-Smakfull.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smakfull.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Smakfull/Pods-Smakfull.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,8 +106,8 @@
 		B695EC462073DA4B006FFF69 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				B6FFDAAD2073E19D00D869A3 /* Assets.xcassets */,
 				B695EC3B2073D863006FFF69 /* LaunchScreen.storyboard */,
-				B695EC392073D863006FFF69 /* Assets.xcassets */,
 				B695EC3E2073D863006FFF69 /* Info.plist */,
 			);
 			path = SupportingFiles;
@@ -207,7 +207,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B695EC3D2073D863006FFF69 /* LaunchScreen.storyboard in Resources */,
-				B695EC3A2073D863006FFF69 /* Assets.xcassets in Resources */,
+				B6FFDAAE2073E19D00D869A3 /* Assets.xcassets in Resources */,
 				B695EC382073D85E006FFF69 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
