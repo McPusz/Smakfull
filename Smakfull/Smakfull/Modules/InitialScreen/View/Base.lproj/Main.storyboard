@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Smakfull" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aEK-Lk-m3O">
+                                <rect key="frame" x="146.66666666666666" y="445.33333333333331" width="81.666666666666657" height="81.333333333333314"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="aEK-Lk-m3O" secondAttribute="height" multiplier="1:1" id="11F-kr-eEB"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zEA-ep-96V">
+                                <rect key="frame" x="20" y="536.66666666666663" width="335" height="25.333333333333371"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="21"/>
+                                <color key="textColor" red="0.99215686270000003" green="1" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Smakfull" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x5Y-Er-dED">
+                                <rect key="frame" x="20" y="387" width="335" height="38.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="32"/>
+                                <color key="textColor" red="0.99215686274509807" green="1" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8rn-rs-aoO">
+                                <rect key="frame" x="46.333333333333343" y="717.33333333333337" width="281.33333333333326" height="40.666666666666629"/>
+                                <color key="backgroundColor" red="0.89411764705882357" green="0.10196078431372549" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Retry">
+                                    <color key="titleColor" red="0.99215686274509807" green="1" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.58039215686274515" blue="0.10196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="x5Y-Er-dED" secondAttribute="trailing" constant="20" id="8Gb-u5-1sW"/>
+                            <constraint firstItem="zEA-ep-96V" firstAttribute="top" secondItem="aEK-Lk-m3O" secondAttribute="bottom" constant="10" id="A3s-NP-Fvc"/>
+                            <constraint firstItem="8rn-rs-aoO" firstAttribute="top" relation="greaterThanOrEqual" secondItem="zEA-ep-96V" secondAttribute="bottom" constant="20" id="Azw-D3-oPr"/>
+                            <constraint firstItem="aEK-Lk-m3O" firstAttribute="top" secondItem="x5Y-Er-dED" secondAttribute="bottom" constant="20" id="B5x-mQ-oXm"/>
+                            <constraint firstItem="8rn-rs-aoO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="C9N-Zt-Sa7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zEA-ep-96V" secondAttribute="trailing" constant="20" id="D9n-RD-EoX"/>
+                            <constraint firstItem="x5Y-Er-dED" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FeA-yx-2RH"/>
+                            <constraint firstItem="8rn-rs-aoO" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:20" id="PeN-BT-ssL"/>
+                            <constraint firstItem="x5Y-Er-dED" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="a3Q-TU-YYf"/>
+                            <constraint firstItem="8rn-rs-aoO" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="3:4" id="e38-oy-ctp"/>
+                            <constraint firstItem="aEK-Lk-m3O" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jIX-kO-YsO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8rn-rs-aoO" secondAttribute="bottom" constant="20" id="jT8-yR-hRd"/>
+                            <constraint firstItem="zEA-ep-96V" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="jfb-vM-2Fz"/>
+                            <constraint firstItem="x5Y-Er-dED" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="nMC-yY-z8b"/>
+                            <constraint firstItem="aEK-Lk-m3O" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:10" id="nuZ-eJ-dq8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
