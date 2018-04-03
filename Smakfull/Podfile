@@ -1,8 +1,7 @@
 
 target 'Smakfull' do
   use_frameworks!
-pod 'Moya'
-pod 'RxSwift'
+pod 'Moya/RxSwift'
 pod 'RxCocoa'
 pod 'Reachability'
 pod 'SwiftLint'

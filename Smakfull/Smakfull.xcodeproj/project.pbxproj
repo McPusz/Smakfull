@@ -15,6 +15,11 @@
 		B6FFDAAE2073E19D00D869A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6FFDAAD2073E19D00D869A3 /* Assets.xcassets */; };
 		B6FFDAB32073E5D600D869A3 /* RecipesList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6FFDAB22073E5D600D869A3 /* RecipesList.storyboard */; };
 		B6FFDAB52073E86C00D869A3 /* RecipesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FFDAB42073E86C00D869A3 /* RecipesListViewController.swift */; };
+		B6FFDAB72073F09600D869A3 /* NetworkSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FFDAB62073F09600D869A3 /* NetworkSettings.swift */; };
+		B6FFDAB92073F44B00D869A3 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FFDAB82073F44B00D869A3 /* NetworkService.swift */; };
+		B6FFDABB2073F68900D869A3 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FFDABA2073F68900D869A3 /* NetworkManager.swift */; };
+		B6FFDABF2073F96900D869A3 /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FFDABE2073F96900D869A3 /* RecipeModel.swift */; };
+		B6FFDAC120740B6800D869A3 /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FFDAC020740B6800D869A3 /* RecipeCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +34,11 @@
 		B6FFDAAD2073E19D00D869A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B6FFDAB22073E5D600D869A3 /* RecipesList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecipesList.storyboard; sourceTree = "<group>"; };
 		B6FFDAB42073E86C00D869A3 /* RecipesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesListViewController.swift; sourceTree = "<group>"; };
+		B6FFDAB62073F09600D869A3 /* NetworkSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSettings.swift; sourceTree = "<group>"; };
+		B6FFDAB82073F44B00D869A3 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		B6FFDABA2073F68900D869A3 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		B6FFDABE2073F96900D869A3 /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
+		B6FFDAC020740B6800D869A3 /* RecipeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
 		CB88086A517F0F1C68C80813 /* Pods-Smakfull.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smakfull.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Smakfull/Pods-Smakfull.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,9 +92,9 @@
 		B695EC312073D85E006FFF69 /* Smakfull */ = {
 			isa = PBXGroup;
 			children = (
-				B695EC482073DA89006FFF69 /* Networking */,
 				B695EC442073DA23006FFF69 /* AppSettings */,
 				B695EC462073DA4B006FFF69 /* SupportingFiles */,
+				B695EC482073DA89006FFF69 /* Networking */,
 				B695EC472073DA79006FFF69 /* Modules */,
 			);
 			path = Smakfull;
@@ -129,6 +139,9 @@
 		B695EC482073DA89006FFF69 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				B6FFDAB62073F09600D869A3 /* NetworkSettings.swift */,
+				B6FFDAB82073F44B00D869A3 /* NetworkService.swift */,
+				B6FFDABA2073F68900D869A3 /* NetworkManager.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -154,6 +167,8 @@
 		B6FFDAAF2073E4F200D869A3 /* RecipesList */ = {
 			isa = PBXGroup;
 			children = (
+				B6FFDABD2073F94800D869A3 /* Model */,
+				B6FFDABC2073F93E00D869A3 /* ViewModel */,
 				B6FFDAB02073E4FF00D869A3 /* View */,
 			);
 			path = RecipesList;
@@ -164,6 +179,7 @@
 			children = (
 				B6FFDAB22073E5D600D869A3 /* RecipesList.storyboard */,
 				B6FFDAB42073E86C00D869A3 /* RecipesListViewController.swift */,
+				B6FFDAC020740B6800D869A3 /* RecipeCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -173,6 +189,21 @@
 			children = (
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B6FFDABC2073F93E00D869A3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B6FFDABD2073F94800D869A3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B6FFDABE2073F96900D869A3 /* RecipeModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,9 +345,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6FFDABF2073F96900D869A3 /* RecipeModel.swift in Sources */,
+				B6FFDABB2073F68900D869A3 /* NetworkManager.swift in Sources */,
+				B6FFDAB92073F44B00D869A3 /* NetworkService.swift in Sources */,
+				B6FFDAC120740B6800D869A3 /* RecipeCell.swift in Sources */,
 				B695EC332073D85E006FFF69 /* AppDelegate.swift in Sources */,
 				B6FFDAAC2073DB4100D869A3 /* InitialViewController.swift in Sources */,
 				B6FFDAB52073E86C00D869A3 /* RecipesListViewController.swift in Sources */,
+				B6FFDAB72073F09600D869A3 /* NetworkSettings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
