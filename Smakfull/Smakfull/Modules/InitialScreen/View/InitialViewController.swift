@@ -18,10 +18,20 @@ class InitialViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupView()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now()+1.0) { [weak self] in
+            self?.goToRecipesList()
+        }
     }
     
     private func setupView() {
         self.retryButton.isHidden = true
     }
 
+    private func goToRecipesList() {
+        let recipesSB = UIStoryboard(name: "RecipesList", bundle: nil)
+        let recipesVC = recipesSB.instantiateViewController(withIdentifier: "RecipesListViewController")
+//        guard let recipesVC = recipesSB.instantiateInitialViewController() else { return }
+        self.present(recipesVC, animated: true, completion: nil)
+    }
 }

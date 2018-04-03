@@ -13,6 +13,8 @@
 		B695EC3D2073D863006FFF69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B695EC3B2073D863006FFF69 /* LaunchScreen.storyboard */; };
 		B6FFDAAC2073DB4100D869A3 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FFDAAB2073DB4100D869A3 /* InitialViewController.swift */; };
 		B6FFDAAE2073E19D00D869A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6FFDAAD2073E19D00D869A3 /* Assets.xcassets */; };
+		B6FFDAB32073E5D600D869A3 /* RecipesList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6FFDAB22073E5D600D869A3 /* RecipesList.storyboard */; };
+		B6FFDAB52073E86C00D869A3 /* RecipesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FFDAB42073E86C00D869A3 /* RecipesListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		B695EC3E2073D863006FFF69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B6FFDAAB2073DB4100D869A3 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		B6FFDAAD2073E19D00D869A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B6FFDAB22073E5D600D869A3 /* RecipesList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecipesList.storyboard; sourceTree = "<group>"; };
+		B6FFDAB42073E86C00D869A3 /* RecipesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesListViewController.swift; sourceTree = "<group>"; };
 		CB88086A517F0F1C68C80813 /* Pods-Smakfull.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smakfull.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Smakfull/Pods-Smakfull.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -116,6 +120,7 @@
 		B695EC472073DA79006FFF69 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				B6FFDAAF2073E4F200D869A3 /* RecipesList */,
 				B6FFDAA92073DB1900D869A3 /* InitialScreen */,
 			);
 			path = Modules;
@@ -131,6 +136,7 @@
 		B6FFDAA92073DB1900D869A3 /* InitialScreen */ = {
 			isa = PBXGroup;
 			children = (
+				B6FFDAB12073E50400D869A3 /* ViewModel */,
 				B6FFDAAA2073DB2000D869A3 /* View */,
 			);
 			path = InitialScreen;
@@ -143,6 +149,30 @@
 				B6FFDAAB2073DB4100D869A3 /* InitialViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		B6FFDAAF2073E4F200D869A3 /* RecipesList */ = {
+			isa = PBXGroup;
+			children = (
+				B6FFDAB02073E4FF00D869A3 /* View */,
+			);
+			path = RecipesList;
+			sourceTree = "<group>";
+		};
+		B6FFDAB02073E4FF00D869A3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B6FFDAB22073E5D600D869A3 /* RecipesList.storyboard */,
+				B6FFDAB42073E86C00D869A3 /* RecipesListViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B6FFDAB12073E50400D869A3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,6 +236,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6FFDAB32073E5D600D869A3 /* RecipesList.storyboard in Resources */,
 				B695EC3D2073D863006FFF69 /* LaunchScreen.storyboard in Resources */,
 				B6FFDAAE2073E19D00D869A3 /* Assets.xcassets in Resources */,
 				B695EC382073D85E006FFF69 /* Main.storyboard in Resources */,
@@ -285,6 +316,7 @@
 			files = (
 				B695EC332073D85E006FFF69 /* AppDelegate.swift in Sources */,
 				B6FFDAAC2073DB4100D869A3 /* InitialViewController.swift in Sources */,
+				B6FFDAB52073E86C00D869A3 /* RecipesListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
