@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wey-64-lOp">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Recipe name-->
+        <scene sceneID="a3M-uX-fiu">
+            <objects>
+                <viewController storyboardIdentifier="RecipeDetailsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wey-64-lOp" customClass="RecipeDetailsViewController" customModule="Smakfull" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IMl-94-pGu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dSa-ZZ-vlo">
+                                <rect key="frame" x="16" y="60" width="343" height="273"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="dSa-ZZ-vlo" secondAttribute="height" multiplier="49:39" id="cyb-j0-4ZX"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yo1-R6-naN">
+                                <rect key="frame" x="16" y="341" width="343" height="380.33333333333326"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dKN-uW-9Dg">
+                                        <rect key="frame" x="16" y="8" width="311" height="364.33333333333331"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" red="0.99215686270000003" green="1" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.99215686270000003" green="1" blue="0.98823529409999999" alpha="0.23753210616438356" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="dKN-uW-9Dg" firstAttribute="top" secondItem="Yo1-R6-naN" secondAttribute="top" constant="8" id="9WA-h8-c5G"/>
+                                    <constraint firstItem="dKN-uW-9Dg" firstAttribute="leading" secondItem="Yo1-R6-naN" secondAttribute="leading" constant="16" id="ODw-zm-yL9"/>
+                                    <constraint firstAttribute="bottom" secondItem="dKN-uW-9Dg" secondAttribute="bottom" constant="8" id="go6-mX-B9O"/>
+                                    <constraint firstAttribute="trailing" secondItem="dKN-uW-9Dg" secondAttribute="trailing" constant="16" id="xOp-ha-vm3"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9v7-30-hRQ">
+                                <rect key="frame" x="325" y="303" width="26" height="22"/>
+                                <inset key="imageEdgeInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <size key="titleShadowOffset" width="2" height="0.0"/>
+                                <state key="normal" title="11" image="heart_icon_mcpusz">
+                                    <color key="titleColor" red="0.89411764709999997" green="0.1019607843" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tiw-5y-jaX">
+                                <rect key="frame" x="47" y="737.33333333333337" width="281" height="40.666666666666629"/>
+                                <color key="backgroundColor" red="0.89411764705882357" green="0.10196078431372549" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="show original">
+                                    <color key="titleColor" red="0.99215686270000003" green="1" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.16078431372549021" green="0.73725490196078436" blue="0.67843137254901964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9v7-30-hRQ" firstAttribute="bottom" secondItem="dSa-ZZ-vlo" secondAttribute="bottom" constant="-8" id="17m-RC-D3V"/>
+                            <constraint firstItem="tiw-5y-jaX" firstAttribute="top" secondItem="Yo1-R6-naN" secondAttribute="bottom" constant="16" id="3Z2-M1-juA"/>
+                            <constraint firstItem="tiw-5y-jaX" firstAttribute="width" secondItem="IMl-94-pGu" secondAttribute="width" multiplier="3:4" id="7Jn-Jf-pt9"/>
+                            <constraint firstItem="tiw-5y-jaX" firstAttribute="centerX" secondItem="IMl-94-pGu" secondAttribute="centerX" id="EZI-yE-tBb"/>
+                            <constraint firstItem="tiw-5y-jaX" firstAttribute="height" secondItem="IMl-94-pGu" secondAttribute="height" multiplier="1:20" id="LXZ-kw-16D"/>
+                            <constraint firstItem="9v7-30-hRQ" firstAttribute="trailing" secondItem="dSa-ZZ-vlo" secondAttribute="trailing" constant="-8" id="YMW-ud-WQq"/>
+                            <constraint firstItem="dSa-ZZ-vlo" firstAttribute="leading" secondItem="Jua-pJ-UAR" secondAttribute="leading" constant="16" id="aIL-XN-BFx"/>
+                            <constraint firstItem="Yo1-R6-naN" firstAttribute="leading" secondItem="Jua-pJ-UAR" secondAttribute="leading" constant="16" id="bUJ-Xs-v61"/>
+                            <constraint firstItem="Jua-pJ-UAR" firstAttribute="trailing" secondItem="Yo1-R6-naN" secondAttribute="trailing" constant="16" id="kbe-rP-vDh"/>
+                            <constraint firstItem="dSa-ZZ-vlo" firstAttribute="top" secondItem="Jua-pJ-UAR" secondAttribute="top" constant="16" id="pKt-pz-Ky1"/>
+                            <constraint firstItem="tiw-5y-jaX" firstAttribute="bottom" secondItem="Jua-pJ-UAR" secondAttribute="bottom" id="pr2-8i-9Hz"/>
+                            <constraint firstItem="Yo1-R6-naN" firstAttribute="top" secondItem="dSa-ZZ-vlo" secondAttribute="bottom" constant="8" id="tSE-V8-yzn"/>
+                            <constraint firstItem="Jua-pJ-UAR" firstAttribute="trailing" secondItem="dSa-ZZ-vlo" secondAttribute="trailing" constant="16" id="zl4-Bd-SBD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Jua-pJ-UAR"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Recipe name" id="ZIu-hn-cAd"/>
+                    <connections>
+                        <outlet property="recipeDescriptionTextView" destination="dKN-uW-9Dg" id="bIs-ao-IpQ"/>
+                        <outlet property="recipeImageView" destination="dSa-ZZ-vlo" id="Fim-eR-8wP"/>
+                        <outlet property="recipeLikesButton" destination="9v7-30-hRQ" id="TsQ-6X-gwl"/>
+                        <outlet property="recipeWebViewButton" destination="tiw-5y-jaX" id="jBe-tT-3FY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x9d-nm-Rwn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="900" y="192.85714285714286"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="heart_icon_mcpusz" width="10" height="10"/>
+    </resources>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+</document>

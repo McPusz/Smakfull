@@ -10,4 +10,6 @@ import Foundation
 
 struct NetworkSettings {
     static let baseURL: URL = URL(string: "https://www.godt.no/api")!
+    
+    static let webLink: String = "https://www.godt.no/#!/oppskrift/"
 }

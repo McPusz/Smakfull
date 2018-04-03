@@ -31,5 +31,10 @@ class RecipesManager: NetworkManager<NetworkService> {
             return Observable.just(results.results)
         }
     }
+    
+    func getRecipeDetails(for id: String) -> Observable<RecipeDetailsModel> {
+        let response = self.request(.getRecipeDetails(id: id))
+        return response.map(RecipeDetailsModel.self)
+    }
 
 }

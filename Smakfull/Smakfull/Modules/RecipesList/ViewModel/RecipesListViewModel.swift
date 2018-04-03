@@ -34,4 +34,9 @@ class RecipesListViewModel {
                 print(error.localizedDescription)
             }).disposed(by: self.disposeBag)
     }
+    
+    func recipeDetailsObservable(for row: Int) -> Observable<RecipeDetailsModel> {
+        let recipeId = self.recipes[row].id
+        return RecipesManager.shared.getRecipeDetails(for: String(recipeId))
+    }
 }
