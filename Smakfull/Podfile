@@ -6,4 +6,5 @@ pod 'RxCocoa'
 pod 'Reachability'
 pod 'SwiftLint'
 pod 'Kingfisher'
+pod 'MCToast', :git => 'https://github.com/McPusz/MCToast'
 end

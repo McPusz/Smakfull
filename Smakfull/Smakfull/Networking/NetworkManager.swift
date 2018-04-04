@@ -19,6 +19,11 @@ class NetworkManager<T: TargetType> {
             .rx
             .request(target)
             .asObservable()
+            .do(onNext: { (response) in
+                if !((200..<300) ~= response.statusCode) {
+                    response.printToast()
+                }
+            })
     }
 }
 

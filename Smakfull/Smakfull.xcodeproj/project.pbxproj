@@ -29,6 +29,7 @@
 		B6FFDAD5207437E100D869A3 /* UIViewController+NavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FFDAD4207437E100D869A3 /* UIViewController+NavigationItem.swift */; };
 		B6FFDADA20744FBE00D869A3 /* WebViewStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6FFDAD920744FBE00D869A3 /* WebViewStoryboard.storyboard */; };
 		B6FFDADC2074512400D869A3 /* WebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FFDADB2074512400D869A3 /* WebViewViewController.swift */; };
+		B6FFDADE20745AE600D869A3 /* MoyaResponse+Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FFDADD20745AE600D869A3 /* MoyaResponse+Toast.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,7 @@
 		B6FFDAD4207437E100D869A3 /* UIViewController+NavigationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+NavigationItem.swift"; sourceTree = "<group>"; };
 		B6FFDAD920744FBE00D869A3 /* WebViewStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WebViewStoryboard.storyboard; sourceTree = "<group>"; };
 		B6FFDADB2074512400D869A3 /* WebViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewViewController.swift; sourceTree = "<group>"; };
+		B6FFDADD20745AE600D869A3 /* MoyaResponse+Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoyaResponse+Toast.swift"; sourceTree = "<group>"; };
 		CB88086A517F0F1C68C80813 /* Pods-Smakfull.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smakfull.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Smakfull/Pods-Smakfull.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -234,6 +236,7 @@
 			children = (
 				B6FFDAC520741D1000D869A3 /* UIViewController+Keyboard.swift */,
 				B6FFDAD4207437E100D869A3 /* UIViewController+NavigationItem.swift */,
+				B6FFDADD20745AE600D869A3 /* MoyaResponse+Toast.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -394,6 +397,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Smakfull/Pods-Smakfull-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/MCToast/MCToast.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Reachability/Reachability.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
@@ -404,6 +408,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MCToast.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
@@ -454,6 +459,7 @@
 				B6FFDAAC2073DB4100D869A3 /* InitialViewController.swift in Sources */,
 				B6FFDAB52073E86C00D869A3 /* RecipesListViewController.swift in Sources */,
 				B6FFDACF2074295A00D869A3 /* RecipeDetailsViewController.swift in Sources */,
+				B6FFDADE20745AE600D869A3 /* MoyaResponse+Toast.swift in Sources */,
 				B6FFDAB72073F09600D869A3 /* NetworkSettings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
