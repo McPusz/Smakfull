@@ -21,13 +21,14 @@ class RecipeDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configure()
+        self.setupTransparentNaviBar(withTitle: self.viewModel.recipeName)
     }
 
     private func configure() {
-        if let imageURL = self.viewModel.imageURL {
+        if let imageURL = self.viewModel.imageURL, let attrStr = self.viewModel.htmlDesc {
             self.recipeImageView.kf.setImage(with: imageURL)
+            self.recipeDescriptionTextView.attributedText = attrStr
         }
-        self.recipeDescriptionTextView.text = self.viewModel.recipeDesc
         self.recipeLikesButton.setTitle(self.viewModel.likesString, for: .normal)
     }
     

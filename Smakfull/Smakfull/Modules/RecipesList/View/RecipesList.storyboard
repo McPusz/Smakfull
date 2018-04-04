@@ -37,6 +37,10 @@
                                                         <constraint firstAttribute="width" secondItem="4fI-Cx-pgy" secondAttribute="height" multiplier="1:1" id="p7w-pc-eTE"/>
                                                     </constraints>
                                                 </imageView>
+                                                <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oSy-h3-osG">
+                                                    <rect key="frame" x="71" y="0.0" width="271" height="66"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Svinekjøtt med perler diqweiqeqeqewq" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AcN-Sl-tDS">
                                                     <rect key="frame" x="75.666666666666671" y="15.999999999999996" width="253.33333333333331" height="33.666666666666657"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -46,13 +50,17 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="4fI-Cx-pgy" secondAttribute="bottom" id="ECm-ho-GBq"/>
+                                                <constraint firstItem="AcN-Sl-tDS" firstAttribute="leading" secondItem="oSy-h3-osG" secondAttribute="leading" constant="5" id="FZM-CF-pN3"/>
                                                 <constraint firstItem="4fI-Cx-pgy" firstAttribute="top" secondItem="fy5-EN-QVz" secondAttribute="top" id="GM4-eQ-Mi0"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="AcN-Sl-tDS" secondAttribute="trailing" constant="5" id="Lhh-Q0-LPT"/>
+                                                <constraint firstAttribute="bottom" secondItem="oSy-h3-osG" secondAttribute="bottom" id="SdH-cs-U0l"/>
                                                 <constraint firstItem="AcN-Sl-tDS" firstAttribute="top" secondItem="fy5-EN-QVz" secondAttribute="topMargin" constant="5" id="ZEJ-0P-xa7"/>
                                                 <constraint firstItem="4fI-Cx-pgy" firstAttribute="height" secondItem="fy5-EN-QVz" secondAttribute="height" id="iJE-s6-Gyy"/>
+                                                <constraint firstItem="oSy-h3-osG" firstAttribute="top" secondItem="fy5-EN-QVz" secondAttribute="top" id="lJ0-YA-C4O"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="AcN-Sl-tDS" secondAttribute="bottom" constant="5" id="mHx-M5-ctT"/>
                                                 <constraint firstItem="4fI-Cx-pgy" firstAttribute="leading" secondItem="fy5-EN-QVz" secondAttribute="leading" id="p0h-BQ-t0E"/>
                                                 <constraint firstItem="AcN-Sl-tDS" firstAttribute="leading" secondItem="4fI-Cx-pgy" secondAttribute="trailing" constant="10" id="tjk-8s-OlY"/>
+                                                <constraint firstAttribute="trailing" secondItem="oSy-h3-osG" secondAttribute="trailing" id="zQs-ta-p7D"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -111,6 +119,20 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aDd-yI-NWR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-82.400000000000006" y="175.86206896551727"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="eBM-SS-g6n">
+            <objects>
+                <viewController id="6I3-fc-BYT" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TCx-J4-LKB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="6f8-rc-2J0"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Xo-sY-Ce4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

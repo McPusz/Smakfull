@@ -17,9 +17,22 @@ class RecipeDetailsViewModel {
         return String(dataSource.numberOfLikes)
     }
     
+    var recipeName: String? {
+        return dataSource?.title
+    }
+    
     var recipeDesc: String {
         guard let dataSource = dataSource else { return "" }
         return dataSource.description
+    }
+    
+    var htmlDesc: NSAttributedString? {
+        guard let dataSource = dataSource,
+            let htmlData = NSString(string: dataSource.description).data(using: String.Encoding.unicode.rawValue)
+            else { return nil }
+        let htmlAttribute = [NSAttributedString.DocumentReadingOptionKey.documentType: NSAttributedString.DocumentType.html]
+        let attrStr = try? NSAttributedString(data: htmlData, options: htmlAttribute, documentAttributes: nil)
+        return attrStr
     }
     
     var webLink: String {
