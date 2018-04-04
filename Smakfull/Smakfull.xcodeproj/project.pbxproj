@@ -27,6 +27,8 @@
 		B6FFDAD120742F9000D869A3 /* RecipeDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FFDAD020742F9000D869A3 /* RecipeDetailsViewModel.swift */; };
 		B6FFDAD320742FF800D869A3 /* RecipeDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FFDAD220742FF800D869A3 /* RecipeDetailsModel.swift */; };
 		B6FFDAD5207437E100D869A3 /* UIViewController+NavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FFDAD4207437E100D869A3 /* UIViewController+NavigationItem.swift */; };
+		B6FFDADA20744FBE00D869A3 /* WebViewStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6FFDAD920744FBE00D869A3 /* WebViewStoryboard.storyboard */; };
+		B6FFDADC2074512400D869A3 /* WebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FFDADB2074512400D869A3 /* WebViewViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +55,8 @@
 		B6FFDAD020742F9000D869A3 /* RecipeDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsViewModel.swift; sourceTree = "<group>"; };
 		B6FFDAD220742FF800D869A3 /* RecipeDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsModel.swift; sourceTree = "<group>"; };
 		B6FFDAD4207437E100D869A3 /* UIViewController+NavigationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+NavigationItem.swift"; sourceTree = "<group>"; };
+		B6FFDAD920744FBE00D869A3 /* WebViewStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WebViewStoryboard.storyboard; sourceTree = "<group>"; };
+		B6FFDADB2074512400D869A3 /* WebViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewViewController.swift; sourceTree = "<group>"; };
 		CB88086A517F0F1C68C80813 /* Pods-Smakfull.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smakfull.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Smakfull/Pods-Smakfull.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -145,6 +149,7 @@
 		B695EC472073DA79006FFF69 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				B6FFDAD620744FA000D869A3 /* WebView */,
 				B6FFDAC82074290C00D869A3 /* RecipeDetails */,
 				B6FFDAAF2073E4F200D869A3 /* RecipesList */,
 				B6FFDAA92073DB1900D869A3 /* InitialScreen */,
@@ -275,6 +280,23 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		B6FFDAD620744FA000D869A3 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				B6FFDAD720744FA800D869A3 /* View */,
+			);
+			path = WebView;
+			sourceTree = "<group>";
+		};
+		B6FFDAD720744FA800D869A3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B6FFDAD920744FBE00D869A3 /* WebViewStoryboard.storyboard */,
+				B6FFDADB2074512400D869A3 /* WebViewViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -339,6 +361,7 @@
 				B6FFDAB32073E5D600D869A3 /* RecipesList.storyboard in Resources */,
 				B695EC3D2073D863006FFF69 /* LaunchScreen.storyboard in Resources */,
 				B6FFDAAE2073E19D00D869A3 /* Assets.xcassets in Resources */,
+				B6FFDADA20744FBE00D869A3 /* WebViewStoryboard.storyboard in Resources */,
 				B695EC382073D85E006FFF69 /* Main.storyboard in Resources */,
 				B6FFDACD2074293D00D869A3 /* RecipeDetailsStoryboard.storyboard in Resources */,
 			);
@@ -427,6 +450,7 @@
 				B695EC332073D85E006FFF69 /* AppDelegate.swift in Sources */,
 				B6FFDAC620741D1000D869A3 /* UIViewController+Keyboard.swift in Sources */,
 				B6FFDAC320740F9100D869A3 /* RecipesListViewModel.swift in Sources */,
+				B6FFDADC2074512400D869A3 /* WebViewViewController.swift in Sources */,
 				B6FFDAAC2073DB4100D869A3 /* InitialViewController.swift in Sources */,
 				B6FFDAB52073E86C00D869A3 /* RecipesListViewController.swift in Sources */,
 				B6FFDACF2074295A00D869A3 /* RecipeDetailsViewController.swift in Sources */,

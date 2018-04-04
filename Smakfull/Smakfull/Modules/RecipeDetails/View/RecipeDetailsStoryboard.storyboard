@@ -60,6 +60,9 @@
                                 <state key="normal" title="show original">
                                     <color key="titleColor" red="0.99215686270000003" green="1" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="openWebView:" destination="wey-64-lOp" eventType="touchUpInside" id="w3i-7h-dMi"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.16078431372549021" green="0.73725490196078436" blue="0.67843137254901964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

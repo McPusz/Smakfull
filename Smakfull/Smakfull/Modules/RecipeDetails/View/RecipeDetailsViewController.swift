@@ -32,4 +32,13 @@ class RecipeDetailsViewController: UIViewController {
         self.recipeLikesButton.setTitle(self.viewModel.likesString, for: .normal)
     }
     
+    @IBAction func openWebView(_ sender: UIButton) {
+        guard let url = URL(string: self.viewModel.webLink) else { return }
+        let webViewSB = UIStoryboard(name: "WebViewStoryboard", bundle: nil)
+        guard let webViewVC = webViewSB.instantiateInitialViewController() as? WebViewViewController else { return }
+        webViewVC.url = url
+        self.present(webViewVC, animated: true, completion: nil)
+    
+    }
+    
 }

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pL8-7w-bfj">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Web View View Controller-->
+        <scene sceneID="Pl7-lS-o4W">
+            <objects>
+                <viewController storyboardIdentifier="WebViewViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="pL8-7w-bfj" customClass="WebViewViewController" customModule="Smakfull" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="A0c-6U-WMv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ILk-10-Xs5">
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8uX-7v-4Hq">
+                                <rect key="frame" x="46.333333333333343" y="725.33333333333337" width="281.33333333333326" height="36.666666666666629"/>
+                                <color key="backgroundColor" red="0.89411764709999997" green="0.1019607843" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Close">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeWebView:" destination="pL8-7w-bfj" eventType="touchUpInside" id="fzx-RZ-o6K"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="MAd-57-hpq" firstAttribute="trailing" secondItem="ILk-10-Xs5" secondAttribute="trailing" id="2wz-2u-z63"/>
+                            <constraint firstItem="8uX-7v-4Hq" firstAttribute="width" secondItem="ILk-10-Xs5" secondAttribute="width" multiplier="3:4" id="3kl-n9-csM"/>
+                            <constraint firstItem="8uX-7v-4Hq" firstAttribute="height" secondItem="ILk-10-Xs5" secondAttribute="height" multiplier="1:20" id="AR5-Cj-gys"/>
+                            <constraint firstItem="ILk-10-Xs5" firstAttribute="leading" secondItem="MAd-57-hpq" secondAttribute="leading" id="BJM-xF-E7u"/>
+                            <constraint firstItem="ILk-10-Xs5" firstAttribute="top" secondItem="MAd-57-hpq" secondAttribute="top" id="DLH-2O-x1t"/>
+                            <constraint firstItem="MAd-57-hpq" firstAttribute="bottom" secondItem="8uX-7v-4Hq" secondAttribute="bottom" constant="16" id="HkZ-of-US8"/>
+                            <constraint firstItem="8uX-7v-4Hq" firstAttribute="centerX" secondItem="A0c-6U-WMv" secondAttribute="centerX" id="VXC-y6-KhI"/>
+                            <constraint firstItem="MAd-57-hpq" firstAttribute="bottom" secondItem="ILk-10-Xs5" secondAttribute="bottom" id="XW4-ee-GV0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MAd-57-hpq"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="zD6-ad-YFR"/>
+                    <connections>
+                        <outlet property="closeButton" destination="8uX-7v-4Hq" id="Num-K4-xAr"/>
+                        <outlet property="webView" destination="ILk-10-Xs5" id="YFa-ou-ib4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vMA-OO-pPZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1039.2" y="132.26600985221674"/>
+        </scene>
+    </scenes>
+</document>
