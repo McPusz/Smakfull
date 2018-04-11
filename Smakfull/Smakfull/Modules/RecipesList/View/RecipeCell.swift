@@ -15,8 +15,8 @@ class RecipeCell: UITableViewCell {
         return String(describing: self)
     }
     
-    @IBOutlet weak var recipeImageView: UIImageView!
-    @IBOutlet weak var recipeName: UILabel!
+    @IBOutlet private weak var recipeImageView: UIImageView!
+    @IBOutlet private weak var recipeName: UILabel!
     
     func configure(dataSource: RecipeModel) {
         self.recipeName.text = dataSource.title

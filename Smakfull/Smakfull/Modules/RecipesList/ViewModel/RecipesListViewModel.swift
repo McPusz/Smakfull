@@ -14,6 +14,8 @@ class RecipesListViewModel {
     private var recipes = [RecipeModel]()
     private let disposeBag = DisposeBag()
     
+    var query: PublishSubject<String> = PublishSubject<String>()
+    
     var reloadAction: PublishSubject<Void> = PublishSubject<Void>()
     
     var numberOfRows: Int {
@@ -38,5 +40,11 @@ class RecipesListViewModel {
     func recipeDetailsObservable(for row: Int) -> Observable<RecipeDetailsModel> {
         let recipeId = self.recipes[row].id
         return RecipesManager.shared.getRecipeDetails(for: String(recipeId))
+    }
+    
+    init() {
+        self.query.subscribe(onNext: { [weak self] (query) in
+            self?.searchRequest(for: query)
+        }).disposed(by: self.disposeBag)
     }
 }

@@ -12,9 +12,9 @@ import RxSwift
 
 class NetworkManager<T: TargetType> {
     
-    var provider: MoyaProvider<T> = MoyaProvider<T>()
+    fileprivate var provider: MoyaProvider<T> = MoyaProvider<T>()
     
-    func request(_ target: T) -> Observable<Moya.Response> {
+    fileprivate func request(_ target: T) -> Observable<Moya.Response> {
         return self.provider
             .rx
             .request(target)
@@ -32,9 +32,7 @@ class RecipesManager: NetworkManager<NetworkService> {
     
     func getRecipes(for query: String) -> Observable<[RecipeModel]> {
         let response = self.request(.getRecipes(forQuery: query))
-        return response.map(RecipeResults.self).flatMap { (results) -> Observable<[RecipeModel]> in
-            return Observable.just(results.results)
-        }
+        return response.map(RecipeResults.self).map{$0.results}
     }
     
     func getRecipeDetails(for id: String) -> Observable<RecipeDetailsModel> {

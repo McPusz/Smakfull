@@ -12,12 +12,12 @@ import RxCocoa
 
 class RecipesListViewController: UIViewController {
     
-    @IBOutlet weak var searchBar: UISearchBar!
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet private weak var searchBar: UISearchBar!
+    @IBOutlet private weak var tableView: UITableView!
     
     private let viewModel = RecipesListViewModel()
     private let disposeBag = DisposeBag()
-    private let searchDebounce: RxTimeInterval = 0.3
+    private let searchDebounceInterval: RxTimeInterval = 0.3
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,15 +33,11 @@ class RecipesListViewController: UIViewController {
             .rx
             .text
             .orEmpty
-            .debounce(self.searchDebounce, scheduler: MainScheduler.instance)
+            .filter{!$0.isEmpty}
+            .debounce(self.searchDebounceInterval, scheduler: MainScheduler.instance)
             .distinctUntilChanged()
         
-        
-        searchResultsObservable.subscribe(onNext: { [weak self] (query) in
-            if !query.isEmpty {
-                self?.viewModel.searchRequest(for: query)
-            }
-        }).disposed(by: self.disposeBag)
+        searchResultsObservable.bind(to: self.viewModel.query).disposed(by: self.disposeBag)
     }
     
     private func shouldReloadTableView() {
