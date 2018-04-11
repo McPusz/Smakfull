@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 extension UIViewController {
-    func setupTransparentNaviBar(withTitle title: String? = nil){
+    func setupTransparentNaviBar(withTitle title: String? = nil) {
         //transparency
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()

@@ -62,7 +62,7 @@ class RecipesListViewController: UIViewController {
     private func showRecipeDetails(dataSource: RecipeDetailsModel) {
         let recipeDetailsSB = UIStoryboard(name: "RecipeDetailsStoryboard", bundle: nil)
         guard let recipeDetailsVC = recipeDetailsSB.instantiateViewController(withIdentifier: "RecipeDetailsViewController") as? RecipeDetailsViewController else { return }
-        recipeDetailsVC.viewModel.dataSource = dataSource
+        recipeDetailsVC.injectDataSource(dataSource: dataSource)
         self.navigationController?.pushViewController(recipeDetailsVC, animated: true)
     }
 }

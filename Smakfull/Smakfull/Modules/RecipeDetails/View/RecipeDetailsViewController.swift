@@ -11,12 +11,12 @@ import Kingfisher
 
 class RecipeDetailsViewController: UIViewController {
 
-    @IBOutlet weak var recipeImageView: UIImageView!
-    @IBOutlet weak var recipeDescriptionTextView: UITextView!
-    @IBOutlet weak var recipeLikesButton: UIButton!
-    @IBOutlet weak var recipeWebViewButton: UIButton!
+    @IBOutlet private weak var recipeImageView: UIImageView!
+    @IBOutlet private weak var recipeDescriptionTextView: UITextView!
+    @IBOutlet private weak var recipeLikesButton: UIButton!
+    @IBOutlet private weak var recipeWebViewButton: UIButton!
     
-    let viewModel = RecipeDetailsViewModel()
+    private var viewModel: RecipeDetailsViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +39,11 @@ class RecipeDetailsViewController: UIViewController {
         webViewVC.url = url
         self.present(webViewVC, animated: true, completion: nil)
     
+    }
+    
+    func injectDataSource(dataSource: RecipeDetailsModel) {
+        self.viewModel = RecipeDetailsViewModel()
+        self.viewModel.dataSource = dataSource
     }
     
 }
