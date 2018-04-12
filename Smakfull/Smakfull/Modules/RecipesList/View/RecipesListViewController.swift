@@ -25,6 +25,7 @@ class RecipesListViewController: UIViewController {
         self.setupSearchBar()
         self.hideKeyboardWhenTappedAround()
         self.setupTransparentNaviBar()
+        self.subscribeToDetailsShowEvent()
     }
     
     private func setupSearchBar() {
@@ -40,6 +41,12 @@ class RecipesListViewController: UIViewController {
         searchResultsObservable.bind(to: self.viewModel.query).disposed(by: self.disposeBag)
     }
     
+    private func subscribeToDetailsShowEvent() {
+        self.viewModel.showDetails.subscribe(onNext: { (details) in
+            self.showRecipeDetails(dataSource: details)
+        }).disposed(by: self.disposeBag)
+    }
+    
     private func shouldReloadTableView() {
         self.viewModel
             .reloadAction
@@ -48,12 +55,12 @@ class RecipesListViewController: UIViewController {
             }).disposed(by: self.disposeBag)
     }
     
-    private func selectRecipe(at row: Int) {
-        self.viewModel.recipeDetailsObservable(for: row)
-            .subscribe(onNext: { [weak self] (details) in
-                self?.showRecipeDetails(dataSource: details)
-            }).disposed(by: self.disposeBag)
-    }
+//    private func selectRecipe(at row: Int) {
+//        self.viewModel.recipeDetailsObservable(for: row)
+//            .subscribe(onNext: { [weak self] (details) in
+//                self?.showRecipeDetails(dataSource: details)
+//            }).disposed(by: self.disposeBag)
+//    }
     
     private func showRecipeDetails(dataSource: RecipeDetailsModel) {
         let recipeDetailsSB = UIStoryboard(name: "RecipeDetailsStoryboard", bundle: nil)
@@ -81,6 +88,7 @@ extension RecipesListViewController: UITableViewDataSource, UITableViewDelegate 
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.selectRecipe(at: indexPath.row)
+//        self.selectRecipe(at: indexPath.row)
+        self.viewModel.rowOfTappedCell.onNext(indexPath.row)
     }
 }
