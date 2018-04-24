@@ -55,13 +55,6 @@ class RecipesListViewController: UIViewController {
             }).disposed(by: self.disposeBag)
     }
     
-//    private func selectRecipe(at row: Int) {
-//        self.viewModel.recipeDetailsObservable(for: row)
-//            .subscribe(onNext: { [weak self] (details) in
-//                self?.showRecipeDetails(dataSource: details)
-//            }).disposed(by: self.disposeBag)
-//    }
-    
     private func showRecipeDetails(dataSource: RecipeDetailsModel) {
         let recipeDetailsSB = UIStoryboard(name: "RecipeDetailsStoryboard", bundle: nil)
         guard let recipeDetailsVC = recipeDetailsSB.instantiateViewController(withIdentifier: "RecipeDetailsViewController") as? RecipeDetailsViewController else { return }
@@ -88,7 +81,6 @@ extension RecipesListViewController: UITableViewDataSource, UITableViewDelegate 
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        self.selectRecipe(at: indexPath.row)
         self.viewModel.rowOfTappedCell.onNext(indexPath.row)
     }
 }
